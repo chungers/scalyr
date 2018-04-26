@@ -1,0 +1,23 @@
+{
+  patterns: {
+    SEV: "[EIWCD]",
+    GLOG_STAMP: "\\d{4} (\\d{2}:){2}\\d{2}\\.\\d+"
+  },
+
+  formats: [
+    {
+      format: ".+ \\[journald_monitor\\(\\)\\] entry \"$severity=SEV$$timestamp=GLOG_STAMP$ $pid=number$ $file$:$line_number=number$\\] $text$\"",
+    }, {
+      format: ".*$_=identifier$=$_=quoteOrSpace$",
+      repeat: true,
+    }
+  ],
+  rewrites: [
+    {
+      input: "message",
+      output: "message",
+      match: "/.+/",
+      replace: "$text"
+    }
+  ]
+}
