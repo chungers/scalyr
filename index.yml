@@ -3,7 +3,7 @@
 docker-ee: docker-ee.sh
 
 # Install Scalyr on local host
-scalyr: install-scalyr.sh
+install: install-scalyr.sh
 
 # Install Docker EE and Scalyr
 all : install-all.sh

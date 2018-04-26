@@ -6,8 +6,8 @@ $(sudo scalyr-agent-2 stop)
 cat <<EOF > /tmp/agent.json
 {{ source `agent.json` }}
 EOF
-mkdir -p /etc/scalyr-agent-2
-sudo cp /tmp/agent.json /etc/scalyr-agent-2/agent.json
+sudo mkdir -p /etc/scalyr-agent-2
+sudo cp /tmp/agent.json /etc/scalyr-agent-2
 
 echo "Installing on Scalyr: note this is RHEL only at the moment"
 
