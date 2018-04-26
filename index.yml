@@ -7,3 +7,5 @@ install-scalyr: install-scalyr.sh
 
 # Install Docker EE and Scalyr
 install : install-all.sh
+
+agent.json : agent.json
