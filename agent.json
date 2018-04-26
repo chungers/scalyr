@@ -1,6 +1,7 @@
 {{/* =% text %= */}}
 
-{{ $apiKey := flag "api-key" "string" "api key" | prompt "API key?" "string" "0ySRtj7FVbL1CPxQFcP4Qna0yrpVJYWo7bXwfzSE3Jcw-" }}
+{{/* For a playbook we build flag with prompt and store the value as temporary variable */}}
+{{ $apiKey := flag "api-key" "string" "api key" | prompt "API key?" "string" "0ySRtj7FVbL1CPxQFcP4Qna0yrpVJYWo7bXwfzSE3Jcw-" | var `apiKey`}}
 
 
 // Configuration for the Scalyr Agent. For help:

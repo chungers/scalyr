@@ -3,9 +3,10 @@
 docker-ee: docker-ee.sh
 
 # Install Scalyr on local host
-install-scalyr: install-scalyr.sh
+scalyr: install-scalyr.sh
 
 # Install Docker EE and Scalyr
-install : install-all.sh
+all : install-all.sh
 
+# Parameterized agent.json file
 agent.json : agent.json
