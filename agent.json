@@ -1,4 +1,8 @@
 {{/* =% text %= */}}
+
+{{ $apiKey := flag "api-key" "string" "api key" | prompt "API key?" "string" "0ySRtj7FVbL1CPxQFcP4Qna0yrpVJYWo7bXwfzSE3Jcw-" }}
+
+
 // Configuration for the Scalyr Agent. For help:
 //
 // https://www.scalyr.com/help/scalyr-agent-2
