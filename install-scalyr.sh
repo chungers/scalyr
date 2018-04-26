@@ -1,5 +1,7 @@
 {{/* =% sh %= */}}
 
+$(sudo scalyr-agent-2 stop)
+
 {{ $apiKey := flag "scalyr-api-key" "string" "api key" | prompt "Scalyr API key?" "string" "0ySRtj7FVbL1CPxQFcP4Qna0yrpVJYWo7bXwfzSE3Jcw-" }}
 
 {{ var `apiKey` $apiKey}}{{/* sets a variable for sourced template */}}
