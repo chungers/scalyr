@@ -16,6 +16,8 @@ ip3={{ var `ip3` }}
 delay={{- var `delay` -}}ms
 loss={{- var `loss` -}}%
 
+$(logger "PACKET-LOSS: packet loss at {{ var `loss` }}%, IP list = [{{var `ip1`}}, {{var `ip2`}}, {{var `ip3`}}]")
+
 sudo tc qdisc add dev $interface root handle 1: prio
 sudo tc filter add dev $interface parent 1:0 protocol ip prio 1 u32 match ip dst $ip1 flowid 2:1
 sudo tc filter add dev $interface parent 1:0 protocol ip prio 1 u32 match ip dst $ip2 flowid 2:1
