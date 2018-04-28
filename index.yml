@@ -10,3 +10,6 @@ all : install-all.sh
 
 # Parameterized agent.json file
 agent.json : agent.json
+
+# Introduce packet loss
+packet-loss: packet-loss.sh
